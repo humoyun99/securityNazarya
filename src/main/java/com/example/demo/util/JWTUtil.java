@@ -11,9 +11,10 @@ public class JWTUtil {
     private static final int tokenLiveTime = 1000 * 3600 * 24; // 1-day
     private static final int emailTokenLiveTime = 1000 * 3600; // 1-hour
     private static final String secretKey = "mazgissddfskfekssssssssssssssssssssssssssssssssssssssssssssssssssssfkekekgekgkegkekerkgkegkrkgrkgkrgkrgkrkkrgkrkrkgnrgrgjrgkjrkjfdjekfekf";
-
+//Ushbu Java kodining maqsadi foydalanuvchi
+// profili ID va rolini o'z ichiga olgan JWT (JSON Web Token) yaratishdir.
     public static String encode(Integer profileId, ProfileRole role) {
-        JwtBuilder jwtBuilder = Jwts.builder();
+        JwtBuilder jwtBuilder = Jwts.builder();// JWT yaratish uchun builder obyekti yaratiladi.
         jwtBuilder.issuedAt(new Date());
         SignatureAlgorithm sa = SignatureAlgorithm.HS512;
         SecretKeySpec secretKeySpec = new SecretKeySpec(secretKey.getBytes(), sa.getJcaName());
